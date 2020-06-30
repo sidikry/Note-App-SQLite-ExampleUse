@@ -16,10 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.timkontrakan.mynotesapp.databinding.ActivityNoteAddUpdateBinding;
-import com.timkontrakan.mynotesapp.db.NoteHelper;
-import com.timkontrakan.mynotesapp.entity.Note;
-import com.timkontrakan.mynotesapp.helper.MappingHelper;
+import com.timkontrakan.consumerapp.databinding.ActivityNoteAddUpdateBinding;
+import com.timkontrakan.consumerapp.entity.Note;
+import com.timkontrakan.consumerapp.helper.MappingHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -37,7 +36,6 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
     private Note note;
     private int position;
     private Uri uriWithId;
-    private NoteHelper noteHelper;
 
     public static final String EXTRA_NOTE = "extra_note";
     public static final String EXTRA_POSITION = "extra_position";
@@ -54,8 +52,6 @@ public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         binding = ActivityNoteAddUpdateBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        noteHelper = NoteHelper.getInstance(getApplicationContext());
-        noteHelper.open();
 
         note = getIntent().getParcelableExtra(EXTRA_NOTE);
         if (note != null) {

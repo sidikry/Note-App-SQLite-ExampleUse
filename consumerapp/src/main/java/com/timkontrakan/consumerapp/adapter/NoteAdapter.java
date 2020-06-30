@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.timkontrakan.mynotesapp.CustomOnClickListener;
-import com.timkontrakan.mynotesapp.NoteAddUpdateActivity;
-import com.timkontrakan.mynotesapp.databinding.ItemNoteBinding;
-import com.timkontrakan.mynotesapp.entity.Note;
+import com.timkontrakan.consumerapp.CustomOnClickListener;
+import com.timkontrakan.consumerapp.NoteAddUpdateActivity;
+import com.timkontrakan.consumerapp.databinding.ItemNoteBinding;
+import com.timkontrakan.consumerapp.entity.Note;
 
 import java.util.ArrayList;
 

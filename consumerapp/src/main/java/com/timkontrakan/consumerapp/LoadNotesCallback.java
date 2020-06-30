@@ -1,6 +1,6 @@
 package com.timkontrakan.consumerapp;
 
-import com.timkontrakan.mynotesapp.entity.Note;
+import com.timkontrakan.consumerapp.entity.Note;
 
 import java.util.ArrayList;
 

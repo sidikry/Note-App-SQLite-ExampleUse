@@ -1,9 +1,5 @@
 package com.timkontrakan.mynotesapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,11 +7,14 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.text.format.DateFormat;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.timkontrakan.mynotesapp.databinding.ActivityNoteAddUpdateBinding;
 import com.timkontrakan.mynotesapp.db.NoteHelper;
@@ -26,10 +25,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static android.provider.CallLog.Calls.CONTENT_URI;
 import static android.provider.CallLog.Calls.DATE;
 import static android.provider.MediaStore.MediaColumns.TITLE;
 import static android.provider.MediaStore.Video.VideoColumns.DESCRIPTION;
+import static com.timkontrakan.mynotesapp.db.DatabaseContract.NoteColumns.CONTENT_URI;
 
 public class NoteAddUpdateActivity extends AppCompatActivity implements View.OnClickListener {
 

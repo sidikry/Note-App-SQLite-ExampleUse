@@ -16,12 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.android.material.snackbar.Snackbar;
-import com.timkontrakan.mynotesapp.adapter.NoteAdapter;
-import com.timkontrakan.mynotesapp.databinding.ActivityMainBinding;
-import com.timkontrakan.mynotesapp.db.DatabaseContract;
-import com.timkontrakan.mynotesapp.db.NoteHelper;
-import com.timkontrakan.mynotesapp.entity.Note;
-import com.timkontrakan.mynotesapp.helper.MappingHelper;
+import com.timkontrakan.consumerapp.adapter.NoteAdapter;
+import com.timkontrakan.consumerapp.databinding.ActivityMainBinding;
+import com.timkontrakan.consumerapp.db.DatabaseContract;
+import com.timkontrakan.consumerapp.entity.Note;
+import com.timkontrakan.consumerapp.helper.MappingHelper;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -30,7 +29,6 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
 
     ActivityMainBinding binding;
     private NoteAdapter adapter;
-    private NoteHelper noteHelper;
     private static final String EXTRA_STATE = "EXTRA_STATE";
 
 
@@ -41,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
         setContentView(binding.getRoot());
 
         if (getSupportActionBar() != null)
-            getSupportActionBar().setTitle("Notes");
+            getSupportActionBar().setTitle("Consumer Notes");
 
         binding.rvNotes.setLayoutManager(new LinearLayoutManager(this));
         binding.rvNotes.setHasFixedSize(true);
@@ -169,7 +167,6 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        noteHelper.close();
     }
 
     private void showSnackbarMessage(String message) {

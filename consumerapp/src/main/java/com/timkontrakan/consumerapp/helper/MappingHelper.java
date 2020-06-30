@@ -2,8 +2,8 @@ package com.timkontrakan.consumerapp.helper;
 
 import android.database.Cursor;
 
-import com.timkontrakan.mynotesapp.db.DatabaseContract;
-import com.timkontrakan.mynotesapp.entity.Note;
+import com.timkontrakan.consumerapp.db.DatabaseContract;
+import com.timkontrakan.consumerapp.entity.Note;
 
 import java.util.ArrayList;
 

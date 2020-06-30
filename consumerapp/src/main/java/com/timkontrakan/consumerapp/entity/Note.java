@@ -3,7 +3,7 @@ package com.timkontrakan.consumerapp.entity;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Note implements Parcelable {
+public class    Note implements Parcelable {
     private int id;
     private String title;
     private String description;
