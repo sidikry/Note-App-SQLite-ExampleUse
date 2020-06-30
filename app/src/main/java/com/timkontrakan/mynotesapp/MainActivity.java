@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements LoadNotesCallback
 
 
         if (savedInstanceState == null) {
-            new LoadNotesAsync(noteHelper, this).execute();
+            new LoadNotesAsync(this, this).execute();
         } else {
             ArrayList<Note> list = savedInstanceState.getParcelableArrayList(EXTRA_STATE);
             if (list != null) {
