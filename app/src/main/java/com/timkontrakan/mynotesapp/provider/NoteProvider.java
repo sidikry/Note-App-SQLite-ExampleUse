@@ -6,10 +6,11 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 
+import com.timkontrakan.mynotesapp.db.DatabaseContract;
 import com.timkontrakan.mynotesapp.db.NoteHelper;
 
-import static android.media.tv.TvContract.AUTHORITY;
-import static android.provider.CallLog.Calls.CONTENT_URI;
+import static com.timkontrakan.mynotesapp.db.DatabaseContract.AUTHORITY;
+import static com.timkontrakan.mynotesapp.db.DatabaseContract.NoteColumns.CONTENT_URI;
 import static com.timkontrakan.mynotesapp.db.DatabaseContract.NoteColumns.TABLE_NAME;
 
 public class NoteProvider extends ContentProvider {
@@ -104,7 +105,7 @@ public class NoteProvider extends ContentProvider {
                 deleted = 0;
                 break;
         }
-        getContext().getContentResolver().notifyChange(CONTENT_URI, null);
+        getContext().getContentResolver().notifyChange(DatabaseContract.NoteColumns.CONTENT_URI, null);
         return deleted;
     }
 
